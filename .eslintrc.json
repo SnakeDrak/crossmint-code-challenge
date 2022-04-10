@@ -1,0 +1,51 @@
+{
+  "root": true,
+  "ignorePatterns": [".eslintrc.json"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.json"],
+        "sourceType": "module"
+      },
+      "plugins": ["prettier"],
+      "extends": [
+        "airbnb-base",
+        "airbnb-typescript/base",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
+      ],
+      "env": {
+        "node": true
+      },
+      "rules": {
+        "class-methods-use-this": 0,
+        "new-cap": 0
+      }
+    },
+    {
+      "files": ["*.spec.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.json"]
+      },
+      "plugins": ["jest", "prettier"],
+      "env": {
+        "jest/globals": true,
+        "node": true
+      },
+      "extends": [
+        "airbnb-base",
+        "airbnb-typescript/base",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jest/all",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "class-methods-use-this": 0,
+        "jest/no-conditional-in-test": 0,
+        "@typescript-eslint/no-explicit-any": 0,
+        "new-cap": 0
+      }
+    }
+  ]
+}

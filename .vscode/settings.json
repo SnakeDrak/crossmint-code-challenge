@@ -1,0 +1,26 @@
+{
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "git.autofetch": true,
+  "git.autorefresh": true,
+  "git.enableSmartCommit": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/platforms/**": true,
+    "**/vendor/**": true,
+    "**/components/**": true
+  },
+  "coverage-gutters.showGutterCoverage": false,
+  "coverage-gutters.showLineCoverage": true,
+  "eslint.options": {
+    "extensions": [".ts"]
+  },
+  "eslint.validate": ["javascript", "typescript"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
